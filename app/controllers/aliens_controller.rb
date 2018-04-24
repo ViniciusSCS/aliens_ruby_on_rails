@@ -69,6 +69,6 @@ class AliensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alien_params
-      params.require(:alien).permit(:name, :age)
+      params.require(:alien).permit(:name, :age, :planets_id, power_ids => [])
     end
 end
