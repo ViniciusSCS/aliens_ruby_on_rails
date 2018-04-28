@@ -1,0 +1,8 @@
+docker build -t vscs/javaScript . 
+
+docker run -it -v /home/viniciusscs/projetos/ruby:/usr/src -p 3000:3000 vinicius/ruby /bin/bash
+
+docker start
+docker attach
+
+docker ps -a
