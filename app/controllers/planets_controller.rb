@@ -28,7 +28,7 @@ class PlanetsController < ApplicationController
 
     respond_to do |format|
       if @planet.save
-        format.html { redirect_to @planet, notice: 'Planet was successfully created.' }
+        format.html { redirect_to @planet, notice: 'Planeta adicionado com sucesso.' }
         format.json { render :show, status: :created, location: @planet }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PlanetsController < ApplicationController
   def update
     respond_to do |format|
       if @planet.update(planet_params)
-        format.html { redirect_to @planet, notice: 'Planet was successfully updated.' }
+        format.html { redirect_to @planet, notice: 'Planeta atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @planet }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PlanetsController < ApplicationController
   def destroy
     @planet.destroy
     respond_to do |format|
-      format.html { redirect_to planets_url, notice: 'Planet was successfully destroyed.' }
+      format.html { redirect_to planets_url, notice: 'Planeta excluído com sucesso.' }
       format.json { head :no_content }
     end
   end

@@ -28,7 +28,7 @@ class AliensController < ApplicationController
 
     respond_to do |format|
       if @alien.save
-        format.html { redirect_to @alien, notice: 'Alien was successfully created.' }
+        format.html { redirect_to @alien, notice: 'Alien adicionado com sucesso.' }
         format.json { render :show, status: :created, location: @alien }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AliensController < ApplicationController
   def update
     respond_to do |format|
       if @alien.update(alien_params)
-        format.html { redirect_to @alien, notice: 'Alien was successfully updated.' }
+        format.html { redirect_to @alien, notice: 'Alien atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @alien }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AliensController < ApplicationController
   def destroy
     @alien.destroy
     respond_to do |format|
-      format.html { redirect_to aliens_url, notice: 'Alien was successfully destroyed.' }
+      format.html { redirect_to aliens_url, notice: 'Alien deletado com sucesso.' }
       format.json { head :no_content }
     end
   end
