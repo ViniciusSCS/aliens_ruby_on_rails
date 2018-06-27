@@ -1,6 +1,6 @@
-docker build -t vscs/javaScript . 
+docker build -t vscs/ruby . 
 
-docker run -it -v /home/viniciusscs/projetos/ruby:/usr/src -p 3000:3000 vinicius/ruby /bin/bash
+docker run -it -v /home/viniciusscs/projetos/ruby/ruby_aliens:/usr/src -p 3000:3000 vscs/ruby /bin/bash
 
 docker start
 docker attach
